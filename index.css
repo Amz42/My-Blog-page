@@ -1,0 +1,126 @@
+body{
+	margin:0 auto;
+	top: 0; left:0; right:0; bottom:0;
+	/*
+	background-image: url("bg4.jpg");
+	*/
+	background: url("bg1.jpg");
+	background-size: 100vw 100vh;
+	
+	/* 	
+	animation-name: bg;
+	animation-iteration-count: infinite;
+	animation-duration: 20s;
+	animation-timing-function: ease-in;
+	animation-delay: 2s; 
+	*/
+}
+
+
+/*
+	@keyframes bg{
+		0%{
+			background: url("bg1.jpg");
+			transition: all 1.5s ease-in-out;
+			background-size: 100vw 100vh;
+		}
+		35%{
+			background: url("bg2.jpg");
+			transition: all 2s ease-in-out;
+			background-size: 100vw 100vh;
+		}
+		70%{
+			background: url("bg3.jpg");
+			transition: all 2s ease-in-out;
+			background-size: 100vw 100vh;
+		}
+		100%{
+			background: url("bg4.jpg");
+			transition: all 2s ease-in-out;
+			background-size: 100vw 100vh;
+		}
+}
+*/
+
+#box{
+	min-height: 97vh;
+	margin:10px;
+	background:linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3),rgba(255,255,255,0.7));
+	border-radius: 20px; padding:0;
+}
+#aglogodiv{
+	width: 100%; background-color:white; justify-content: center; height:220px; opacity: 0.5;
+	border-top-left-radius: 20px; border-top-right-radius: 20px; margin-left: 0;
+}
+#aglogo{
+	align-self: center; margin: 0 auto; position: absolute; right: 0; left: 0; 
+	height: 220px; width: 280px;
+}
+#profilepic{
+	height: 200px; width: 230px; margin-left: 40px; border-radius:50%;
+	position: absolute; top:180px;
+	border:5px solid rgba(255,255,255,0.7); 
+}
+#name{
+	color: white;
+    font-family: 'Black Ops One', cursive;
+    font-size: 40pt;
+    margin-left: 300px;
+}
+#information{
+	color: rgb(3, 9, 15); font-size: 18pt; padding: 5px; font-family: 'Audiowide', cursive;
+}
+#info{
+	width:70%; margin-left: 15%;
+}
+#upcoming{
+	margin-left: 15%; font-size:35px; font-family: 'Russo One', sans-serif; color: rgb(13, 40, 174);
+}
+#insta,#fb,#whatsapp{
+	width: 50px; height: 50px;
+	cursor: pointer;
+}
+#fb{
+	 
+}
+nav ul li{
+	display: inline-block; position: relative;   
+}
+nav{
+	 align-self: center; margin-left: 42%;
+}
+#project-list{
+	margin-left: 20rem;
+	font-size: 14pt;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+@media screen and (max-width: 700px){
+    #aglogo{
+    	height: 160px; width: 240px; 
+    }
+    #profilepic{
+    	align-self: center; margin: 0 auto; position: absolute; right: 0; left: 0; 
+    	height: 150px; width: 180px; border-radius: 25px;
+    }
+    #name{
+        text-align: center; margin-left: 0; position: relative; top: 50px; font-size: 35pt;
+    }
+    #info{
+    	width: 94%; margin-left: 3%; position: relative; top: 20px;
+    }
+    #information{
+    	font-size: 14pt; 
+    }
+    #upcoming{
+    	font-size: 20pt; margin-left: 3%;
+    }
+    nav{
+	 align-self: center; margin-left: 25%;
+	}
+	#project-list{
+		margin-left: 2rem;
+	}
+}
