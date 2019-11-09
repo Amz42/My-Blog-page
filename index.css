@@ -6,7 +6,7 @@ body{
 	*/
 	background: url("bg1.jpg");
 	background-size: 100vw 100vh;
-	
+	padding: 0 auto;
 	/* 	
 	animation-name: bg;
 	animation-iteration-count: infinite;
@@ -80,9 +80,6 @@ body{
 	width: 50px; height: 50px;
 	cursor: pointer;
 }
-#fb{
-	 
-}
 nav ul li{
 	display: inline-block; position: relative;   
 }
@@ -95,6 +92,64 @@ nav{
 	text-decoration: none;
 	font-weight: bold;
 }
+
+
+
+/*Loader starts here*/
+#loader-container{
+	height: 110vh;
+	width: 100vw;
+	position: fixed;
+	background-color: black;
+	z-index: 10;
+	margin-top: -10vh;
+}
+
+#loader-div{
+	position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-49%, -50%);
+    width: 125px;
+    height: 125px;
+    background: transparent;
+}
+/* Sizing All Spans & Giving Them A Animation Effect */
+#loader-div span {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    background: #FFFFFF;
+	animation: animate 2s linear infinite;
+	box-shadow: -0.5px -0.5px 6px 1px white, 0.5px 0.5px 6px 1px white;
+}
+/* Animation Cordinates And Animation Styles */
+@keyframes animate {
+/* 12.5%, 37.5%, 62.5%, 87.5% For Fastforward Effect */
+    0% {	top: 0%;	left: 0%;	}
+    12.5% {	top: 0%;	left: 50%;	}
+    25% {	top: 0%;	left: 50%;	}
+    37.5% {	top: 50%;	left: 50%;	}
+    50% {	top: 50%;	left: 50%;	}
+    62.5% {	top: 50%;	left: 0%;	}
+    75% {	top: 50%;	left: 0%;	}
+    87.5% {	top: 0%;	left: 0%;	}
+    100% {	top: 0%;	left: 0%;	}
+}
+/* Giving All Spans A Delay Time For Animation */
+#loader-div span:nth-child(1) {
+    animation-delay: 0s;
+}
+#loader-div span:nth-child(2) {
+    animation-delay: -0.667s;
+}
+#loader-div span:nth-child(3) {
+    animation-delay: -1.334s;
+}
+
+/*Loader ends here*/
+
 
 
 @media screen and (max-width: 700px){
