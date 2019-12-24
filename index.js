@@ -12,4 +12,16 @@ window.onload=function () {
 	setTimeout(() => {
 		document.body.removeChild(document.getElementById("loader-container"))
 	},2000);
+
+	if ('serviceWorker' in navigator) {
+	    window.addEventListener('load', function () {
+	        navigator.serviceWorker.register('/sw.js').then(function (registration) {
+	            console.log('Service worker successfully registered on scope', registration.scope);
+	        }).catch(function (error) {
+	            console.log('Service worker failed to register');
+	        });
+	    });
+	}else{
+		this.console.log("Service Worker Unavailable...");
+	}
 }
